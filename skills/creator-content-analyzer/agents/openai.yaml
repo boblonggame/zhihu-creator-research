@@ -1,0 +1,6 @@
+interface:
+  display_name: "创作者内容观点分析"
+  short_description: "从标准语料中归纳创作者观点并保留来源证据、覆盖率和推断边界"
+  default_prompt: "使用 $creator-content-analyzer 分析这份创作者语料，并输出带来源的观点报告。"
+policy:
+  allow_implicit_invocation: true

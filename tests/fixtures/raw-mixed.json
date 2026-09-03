@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "id": "answer-1",
+      "type": "answer",
+      "question": {"title": "如何理解长期主义？"},
+      "content": "<p>长期主义需要耐心，也需要<strong>持续复盘</strong>。</p><script>secret()</script>",
+      "created_time": 1735689600,
+      "url": "https://www.zhihu.com/question/1/answer/1",
+      "voteup_count": 12,
+      "comment_count": 3
+    },
+    {
+      "id": "answer-1",
+      "type": "answer",
+      "title": "重复条目",
+      "content": "这条内容应按 ID 去重。",
+      "created_time": 1735689600,
+      "url": "https://www.zhihu.com/question/1/answer/duplicate"
+    },
+    {
+      "id": "article-1",
+      "type": "article",
+      "title": "复盘与证据",
+      "content": "观点需要证据，复盘需要反例。",
+      "created_at": "2025-02-03",
+      "url": "https://zhuanlan.zhihu.com/p/1",
+      "favorite_count": 4
+    },
+    {
+      "id": "pin-bad-date",
+      "type": "pin",
+      "content": "日期不合法。",
+      "created_at": "not-a-date",
+      "url": "https://www.zhihu.com/pin/2"
+    },
+    {
+      "id": "pin-no-url",
+      "type": "pin",
+      "content": "缺少来源链接。",
+      "created_at": "2025-02-04"
+    }
+  ]
+}

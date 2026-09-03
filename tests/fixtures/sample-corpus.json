@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "meta": {
+    "platform": "zhihu",
+    "source_profile_url": "https://www.zhihu.com/people/example-author",
+    "captured_at": "2026-09-03T00:00:00Z",
+    "collection_method": "synthetic-test-fixture",
+    "requested_types": ["answer", "article", "pin"],
+    "time_range": {
+      "start": "2024-01-01T00:00:00Z",
+      "end": "2025-06-01T00:00:00Z"
+    },
+    "coverage": {
+      "discovered": 4,
+      "collected": 3,
+      "failed": 1,
+      "complete": false,
+      "note": "合成测试数据：保留一个失败项用于覆盖率测试。"
+    }
+  },
+  "author": {
+    "name": "示例作者",
+    "url_token": "example-author",
+    "profile_url": "https://www.zhihu.com/people/example-author"
+  },
+  "items": [
+    {
+      "id": "answer-1",
+      "type": "answer",
+      "title": "长期主义与复盘",
+      "body": "长期主义需要持续复盘，并用证据修正判断。",
+      "created_at": "2024-01-01T00:00:00Z",
+      "source_url": "https://www.zhihu.com/question/1/answer/1",
+      "metrics": {"voteup": 12, "comment": 3, "favorite": null},
+      "content_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      "id": "article-1",
+      "type": "article",
+      "title": "证据与反例",
+      "body": "观点需要证据，好的复盘也要主动寻找反例。",
+      "created_at": "2025-02-03T00:00:00Z",
+      "source_url": "https://zhuanlan.zhihu.com/p/1",
+      "metrics": {"voteup": 8, "comment": 1, "favorite": 4},
+      "content_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "id": "pin-1",
+      "type": "pin",
+      "title": "",
+      "body": "今天继续复盘：证据不足时先保留判断。",
+      "created_at": "2025-06-01T00:00:00Z",
+      "source_url": "https://www.zhihu.com/pin/1",
+      "metrics": {"voteup": null, "comment": null, "favorite": null},
+      "content_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    }
+  ],
+  "errors": [
+    {
+      "source": "https://www.zhihu.com/pin/2",
+      "type": "pin",
+      "reason": "合成的详情页不可达错误"
+    }
+  ]
+}

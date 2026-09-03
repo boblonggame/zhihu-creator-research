@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Bob-Student/zhihu-creator-research/blob/main/skills/creator-content-analyzer/references/corpus-schema.json",
+  "title": "Creator Content Corpus",
+  "description": "供采集 Skill 与分析 Skill 交换的版本化公开内容语料。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "meta", "author", "items", "errors"],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["platform", "source_profile_url", "captured_at", "collection_method", "requested_types", "coverage"],
+      "properties": {
+        "platform": {"type": "string", "minLength": 1},
+        "source_profile_url": {"type": "string", "format": "uri"},
+        "captured_at": {"type": "string", "format": "date-time"},
+        "collection_method": {"type": "string", "minLength": 1},
+        "requested_types": {
+          "type": "array",
+          "items": {"enum": ["answer", "article", "pin", "other"]},
+          "uniqueItems": true
+        },
+        "time_range": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["start", "end"],
+          "properties": {
+            "start": {"type": ["string", "null"], "format": "date-time"},
+            "end": {"type": ["string", "null"], "format": "date-time"}
+          }
+        },
+        "coverage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["discovered", "collected", "failed", "complete", "note"],
+          "properties": {
+            "discovered": {"type": "integer", "minimum": 0},
+            "collected": {"type": "integer", "minimum": 0},
+            "failed": {"type": "integer", "minimum": 0},
+            "complete": {"type": "boolean"},
+            "note": {"type": "string"}
+          }
+        }
+      }
+    },
+    "author": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url_token", "profile_url"],
+      "properties": {
+        "name": {"type": "string"},
+        "url_token": {"type": "string"},
+        "profile_url": {"type": "string", "format": "uri"}
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "type", "title", "body", "created_at", "source_url", "metrics", "content_hash"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "type": {"enum": ["answer", "article", "pin", "other"]},
+          "title": {"type": "string"},
+          "body": {"type": "string", "minLength": 1},
+          "created_at": {"type": "string", "format": "date-time"},
+          "source_url": {"type": "string", "format": "uri"},
+          "metrics": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["voteup", "comment", "favorite"],
+            "properties": {
+              "voteup": {"type": ["integer", "null"], "minimum": 0},
+              "comment": {"type": ["integer", "null"], "minimum": 0},
+              "favorite": {"type": ["integer", "null"], "minimum": 0}
+            }
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source", "type", "reason"],
+        "properties": {
+          "source": {"type": "string"},
+          "type": {"enum": ["answer", "article", "pin", "other", "unknown"]},
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

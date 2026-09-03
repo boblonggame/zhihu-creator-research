@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.venv/
+.coverage
+.pytest_cache/
+.DS_Store
+
+# 不发布真实采集内容和凭证
+data/
+output/
+outputs/
+runtime/
+tmp/
+*.corpus.json
+*.raw.json
+.env
+.env.*
+*.cookie*
+*credential*
+DevToolsActivePort
+Local State

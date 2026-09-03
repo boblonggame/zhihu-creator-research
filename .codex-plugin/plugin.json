@@ -1,0 +1,36 @@
+{
+  "name": "zhihu-creator-research",
+  "version": "0.1.0",
+  "description": "采集指定知乎创作者的公开内容，并生成带来源和证据边界的观点分析。",
+  "author": {
+    "name": "Bob-Student",
+    "url": "https://github.com/Bob-Student"
+  },
+  "homepage": "https://github.com/Bob-Student/zhihu-creator-research",
+  "repository": "https://github.com/Bob-Student/zhihu-creator-research",
+  "license": "Apache-2.0",
+  "keywords": [
+    "zhihu",
+    "creator-research",
+    "content-analysis",
+    "agent-skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "知乎创作者研究",
+    "shortDescription": "采集知乎公开内容并生成可追溯的观点分析",
+    "longDescription": "包含公开内容采集与创作者观点分析两个可组合 Skill。使用者在自己的浏览器中登录，不需要向 Agent 提供密码、Cookie 或 Token。",
+    "developerName": "Bob-Student",
+    "category": "Research",
+    "capabilities": [
+      "Browser-guided collection",
+      "Evidence-based analysis"
+    ],
+    "websiteURL": "https://github.com/Bob-Student/zhihu-creator-research",
+    "defaultPrompt": [
+      "采集这个知乎创作者的公开内容，并生成标准语料。",
+      "分析这份创作者语料，给每个关键观点附来源。",
+      "比较这位创作者不同年份的观点变化。"
+    ]
+  }
+}

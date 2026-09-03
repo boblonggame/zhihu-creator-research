@@ -1,0 +1,6 @@
+interface:
+  display_name: "知乎公开内容采集"
+  short_description: "用用户自己的登录态采集指定知乎创作者的公开内容并生成标准语料"
+  default_prompt: "使用 $zhihu-public-content-collector 采集这个知乎创作者的公开内容并生成标准语料。"
+policy:
+  allow_implicit_invocation: true
